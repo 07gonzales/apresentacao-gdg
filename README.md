@@ -8,4 +8,4 @@ O projeto, idealizado e proposto pelo Prof. Me. Leonardo Rocha, responsável pel
 
 Segue abaixo o mapa mental elaborado por nós, contendo todas as ideias necessárias para o início do projeto.
 
-![Texto Alternativo]("C:\apresentacao-gdg\apresentacao-gdg\mapa-mental.jpg")
+![Texto Alternativo](mapa-mental.jpg)
