@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>GDG - Londrina</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
 </head>
+
 <body>
-    
+
     <div class="background">
         <div class="gdg-container">
             <div class="shape blue"></div>
@@ -19,15 +24,15 @@
         <canvas id="particles"></canvas>
     </div>
 
-    
+
     <div class="opcoes">
-        <!-- <h1 id="titulo"> GDG - Londrina</h1> -->
-        <button class="button-1">Apresentação do evento</a></button>
-        <button class="button-2">Instagram oficial do evento</button>
-        <button class="button-3">Página oficial do GDG - Londrina <a href=""></a></button>
+        <button class="button-1" onclick="window.location.href='principal.html'">Apresentação do evento</a></button>
+        <button class="button-2" onclick="window.open('https://www.instagram.com/gdglondrina/', '_blank')">Instagram oficial do evento</button>
+        <button class="button-3" onclick="window.open('https://gdg.londrina.dev/', '_blank')">Página oficial do GDG - Londrina</button>
     </div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
