@@ -19,32 +19,9 @@ body, html {
     flex-direction: column;
     gap: 15px;
     text-align: center;
-    z-index: 1; /* Coloca os botões acima da imagem */
+    
 }
 
-#titulo {
-    margin-bottom: 20px; /* Ajusta o espaçamento do título, se necessário */
-}
-
-.button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    z-index: 1; /* Garantir que os botões fiquem acima da imagem */
-}
-
-/* Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
-/* Fundo principal */
 .background {
     position: fixed;
     top: 0;
@@ -57,6 +34,20 @@ body, html {
     align-items: center;
 }
 
+button {
+    font-family: Orbitron;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    gap: 150%;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    opacity: 10%;
+}
+
+
 /* Canvas de partículas */
 #particles {
     position: absolute;
@@ -64,7 +55,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
 }
 
 /* Logo GDG animado */
@@ -73,12 +64,11 @@ body, html {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    /* width: 50%; */
     margin: 10px 20px;
-    max-width: 800px; /* Limita a largura para evitar distorções */
+    max-width: 800px; 
     z-index: 1;
     position: absolute;
-    top: 15%; /* Mantém o logo fixo no topo */
+    top: 15%; 
     left: 25%;
     transform: translateX(-50%);
     animation: float 4s ease-in-out infinite;
@@ -100,42 +90,29 @@ body, html {
 }
 
 .blue { background: #4285F4; transform: rotate(30deg); }
-.green { background: #34A853; transform: rotate(-30deg); }
+.green { background: #34A853; transform: rotate(30deg); }
 .yellow { background: #FBBC05; transform: rotate(30deg); }
 
-/* Texto GDG */
 .gdg-text {
     top: auto;
-    
-    font-size: 40px;
+    font-family: Orbitron;
+    font-size: 50px;
     font-weight: bold;
     color: #FFFFFF;
     letter-spacing: 3px;
     transition: transform 0.3s ease;
 }
 
-/* Animação de hover */
 .gdg-container:hover .shape {
     transform: rotate(0deg);
-    scale: 1.2;
+    scale: (0.9);
+    
 }
 
 .gdg-container:hover .gdg-text {
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 
-
-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    gap: 150%;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    opacity: 75%;
-}
 
 .button-1  {
     background: #4285F4;
@@ -146,17 +123,20 @@ button {
 }
 
 .button-3 {
-    background: #FBBC05;   
+    background: #ffc926;   
 }
 
 .button-1:hover {
-    background: #8db7fc;
+   
+    opacity: 100%;
 }
 
 .button-2:hover{
-    background: #76fd9a;
+    
+    opacity: 100%;
 }
 
 .button-3:hover{
-    background: #f8d877;   
+    
+    opacity: 100%;  
 }
