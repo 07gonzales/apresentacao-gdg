@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+
+<body>
+
+    <!-- Modal de entrada -->
+    <div id="popup" class="modal" style="display: flex;">
+      <div class="modal-content">
+        <h2>Deseja garantir sua vaga?</h2>
+        <button onclick="mostrarFormulario()">Garanta sua vaga</button>
+        <button onclick="fecharPopup()">Não, obrigado</button>
+  
+        <form id="formulario" style="display: none;" onsubmit="enviarFormulario(event)">
+          <input type="text" placeholder="Nome completo" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Número de contato" required />
+          <input type="date" required />
+          <button type="submit">Enviar</button>
+          <button id="cancelar" onclick="fecharPopup()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="menu">
+            <li><a href="#eventos">Próximos eventos</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#passados">Eventos passados</a></li>
+          </ul>
+          <div class="redes-sociais">
+            <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+            <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter" /></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+  
+    <main>
+  
+      <section id="eventos" class="secao">
+        <h2>Próximos Eventos</h2>
+        <div class="evento">
+          <h3>GDG LONDRINA</h3>
+          <p>Um evento voltado para inovação, tecnologia e empreendedorismo digital.</p>
+          <p><strong>Data:</strong> 25 de Julho de 2025</p>
+          <div class="palestrantes">
+            <div class="palestrante">
+              <img src="palestrante1.jpg" alt="Foto Palestrante 1" />
+              <p><strong> BLABLABLA</strong><br />Especialista em IA</p>
+            </div>
+            <div class="palestrante">
+              <img src="palestrante2.jpg" alt="Foto Palestrante 2" />
+              <p><strong>BLABLABLA</strong><br />Fundadora da TechNow</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="sobre" class="secao">
+        <h2>Sobre nós</h2>
+        <p>Somos uma organização dedicada a promover eventos que inspiram e transformam o mercado.</p>
+      </section>
+  
+      <section id="passados" class="secao">
+        <h2>Eventos Passados</h2>
+        <p>Veja aqui o histórico dos nossos melhores encontros, palestras e conferências.</p>
+      </section>
+  
+    </main>
+  
+    <footer>
+      <p>&copy; 2025 - Gabriel Gonzales & Rennan Rentz - Todos os direitos reservados.</p>
+    </footer>
+  
+    <script src="script.js"></script>
+  </body>
+  </html>
