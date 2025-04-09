@@ -42,47 +42,62 @@ window.onload = () => {
   const nextButton = document.querySelector('.next');
   
   let index = 0;
-  let interval;
+  let imageWidth = images[0].getBoundingClientRect().width + 20; 
   
-  // Deixa imagem central focada
+  // DUPLICA AS IMAGENS PRA DAR EFEITO INFINITO
+  images.forEach(img => {
+    const clone = img.cloneNode(true);
+    track.appendChild(clone);
+  });
+  
   function updateCarousel() {
-    images.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
-  
-    const imageWidth = images[0].getBoundingClientRect().width + 20;
-    const trackWidth = imageWidth * images.length;
-    const translateX = -(imageWidth * index - (window.innerWidth / 2 - imageWidth / 2));
-  
+    imageWidth = images[0].getBoundingClientRect().width + 20;
+    const translateX = -(imageWidth * index);
     track.style.transform = `translateX(${translateX}px)`;
   }
   
-  // Mover para próxima imagem
+  // Próxima imagem
   function nextImage() {
-    index = (index + 1) % images.length;
-    updateCarousel();
+    index++;
+    
+    // Quando passar da metade (fim das imagens originais), volta o index suavemente
+    if (index >= images.length) {
+      index = 0;
+      track.style.transition = 'none';
+      updateCarousel();
+      setTimeout(() => {
+        track.style.transition = 'transform 0.5s ease';
+        index++;
+        updateCarousel();
+      }, 20);
+    } else {
+      updateCarousel();
+    }
   }
   
-  // Mover para imagem anterior
+  // Imagem anterior
   function prevImage() {
-    index = (index - 1 + images.length) % images.length;
-    updateCarousel();
+    if (index <= 0) {
+      index = images.length;
+      track.style.transition = 'none';
+      updateCarousel();
+      setTimeout(() => {
+        track.style.transition = 'transform 0.5s ease';
+        index--;
+        updateCarousel();
+      }, 20);
+    } else {
+      index--;
+      updateCarousel();
+    }
   }
   
-  
-  // Navegação por botões
-  nextButton.addEventListener('click', () => {
-    nextImage();
-  });
-  
-  prevButton.addEventListener('click', () => {
-    prevImage();
-  });
-  
-  // Resize responsivo
+  // Eventos
+  nextButton.addEventListener('click', nextImage);
+  prevButton.addEventListener('click', prevImage);
   window.addEventListener('resize', updateCarousel);
   
-  // Iniciar
+  // Inicialização
+  track.style.transition = 'transform 0.5s ease';
   updateCarousel();
-  
   
