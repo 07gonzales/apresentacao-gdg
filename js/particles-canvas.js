@@ -1,12 +1,19 @@
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
+const colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF"];
+let particlesArray = [];
+let mouse = { x: null, y: null };
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let particlesArray = [];
-const colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF"];
-let mouse = { x: null, y: null };
+// Ajusta a quantidade de partículas conforme o tamanho da tela
+function getParticlesAmount() {
+    if (canvas.width <= 480) return 30; // Mobile
+    if (canvas.width <= 768) return 50; // Tablet
+    return 80;                          // Desktop
+}
 
 class Particle {
     constructor(x, y, speedX, speedY, color) {
@@ -21,12 +28,8 @@ class Particle {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        if (this.x > canvas.width || this.x < 0) {
-            this.speedX *= -1;
-        }
-        if (this.y > canvas.height || this.y < 0) {
-            this.speedY *= -1;
-        }
+        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
 
         let dx = this.x - mouse.x;
         let dy = this.y - mouse.y;
@@ -50,7 +53,7 @@ class Particle {
 
 function initParticles() {
     particlesArray = [];
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < getParticlesAmount(); i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
         let speedX = (Math.random() - 0.5) * 2;
@@ -82,25 +85,25 @@ function drawConnections() {
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (let i = 0; i < particlesArray.length; i++) {
-        let particle = particlesArray[i];
-        particle.update();
-        particle.draw();
-    }
+    particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+    });
 
     drawConnections();
+
     requestAnimationFrame(animateParticles);
 }
+
+window.addEventListener("mousemove", function (event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
 
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     initParticles();
-});
-
-window.addEventListener("mousemove", (event) => {
-    mouse.x = event.x;
-    mouse.y = event.y;
 });
 
 initParticles();
