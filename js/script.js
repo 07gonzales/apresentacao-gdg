@@ -30,11 +30,16 @@ window.onload = () => {
   function abrirPopupNovamente() {
     const popup = document.getElementById('popup');
     const formulario = document.getElementById('formulario');
+    const botoesIniciais = document.querySelectorAll(".modal-content > button");
   
     popup.style.display = 'flex';
-    formulario.style.display = 'none'; // volta pra tela inicial do modal
-  }
+    formulario.style.display = 'none';
   
+    // Mostra novamente os botões iniciais
+    botoesIniciais.forEach(botao => {
+      botao.style.display = "inline-block";
+    });
+  }
 
   const track = document.querySelector('.carousel-track');
   const images = Array.from(track.children);
