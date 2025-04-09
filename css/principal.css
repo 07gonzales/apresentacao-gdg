@@ -28,6 +28,10 @@ body, html {
     justify-content: center;
     z-index: 9999;
   }
+
+  .modal.show {
+    display: flex;
+  }
   
   .modal-content {
     background-color: #020305;
@@ -153,20 +157,27 @@ body, html {
   }
   
   #passados {
-    padding: 50px 20px;
+    font-family: Orbitron;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1a1a1a; /* Preto leve */
+    letter-spacing: 0.5px;
     text-align: center;
-    color: #000000;
   }
 
   .quem-somos {
     background-color: #f5f5f5; /* Cinza bem claro, neutro e elegante */
-    color: #1a1a1a; /* Preto suave */
-    padding: 100px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; /* Preto suave */
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: justify;
+    
   }
+ 
   
   .container-quem-somos {
     max-width: 900px;
@@ -175,6 +186,7 @@ body, html {
   }
   
   .quem-somos h2 {
+    font-family: Orbitron;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -187,6 +199,76 @@ body, html {
     line-height: 1.8;
     color: #444444; /* Cinza escuro */
   }
+
+  .proximo-evento {
+    background-color: #f9f9f9;
+    padding: 100px 20px;
+  }
+  
+  .container-evento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .info-evento {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .info-evento h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+  }
+  
+  .card-info {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-info:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-info i {
+    font-size: 30px;
+    color: #0066ff;
+  }
+  
+  .card-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .card-info p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .imagem-evento {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .imagem-evento img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
   
   
   .cards-container {
@@ -233,26 +315,89 @@ body, html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
 
-  /* #fill:hover {
-    transform: scale(1.1);
-    background: rgb(35, 31, 32, 1.1); 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
-
-  #eco:hover {
-    transform: scale(1.1);
-    background: rgb(0, 0, 0); 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  } */
-
   .card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
   }
+
+  .galeria {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .galeria h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #010e1a;
+  }
+  
+  .carousel {
+    
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 400px; /* Espaçamento lateral */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  
+  .carousel-track img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 40px;
+    /* filter: blur(2px); */
+    transition: filter 0.5s ease, transform 0.5s ease;
+    user-select: none;
+    pointer-events: none;
+    
+  }
+  
+  .carousel-track img.active {
+    filter: blur(0);
+    /* transform: scale(1.); */
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 31, 32, 0.7);
+    color: #fff;
+    border: none;
+    margin-left: 1px;
+    font-size: 2rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
   
   .organizadores {
     background-color: #ffffff; /* Branco clean */
@@ -284,6 +429,8 @@ body, html {
     padding: 30px 20px;
     border-radius: 12px;
     transition: transform 0.3s ease;
+    position: relative;  /* ESSA LINHA RESOLVE */
+    height: 100%;
   }
   
   .card-org:hover {
@@ -327,12 +474,59 @@ body, html {
   }
   
   .card-org p {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #555555;
+    color: #000000;
     line-height: 1.5;
+    font-style: bold;
   }
 
+  .social-icons {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+  }
   
+  .social-icons a {
+    color: #010e1a;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #0066ff;
+  }
+  
+
+  #icone-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #1c1c1c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#icone-flutuante:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
   
   
   /* Rodapé */
