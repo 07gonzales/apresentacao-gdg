@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meetup - Unicesumar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/principal.css">
+</head>
+
+<body>
+
+  <!-- Modal de entrada -->
+  <div id="popup" class="modal" style="display: flex;">
+    <div class="modal-content">
+      <h2>Deseja garantir sua vaga?</h2>
+      <button onclick="mostrarFormulario()">Garanta sua vaga</button>
+      <button onclick="fecharPopup()">Não, obrigado</button>
+
+      <form id="formulario" style="display: none;" onsubmit="enviarFormulario(event)">
+        <input type="text" placeholder="Nome completo" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Número de contato" required />
+        <input type="date" required />
+        <label class="checkbox-lgpd">
+          <input type="checkbox" required>
+        Ao enviar este formulário, você declara estar ciente e de acordo que os dados pessoais informados serão utilizados exclusivamente para fins de contato e para o envio de informações e divulgações sobre eventos relacionados. Todas as informações fornecidas estão protegidas de acordo com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), sendo armazenadas com segurança e jamais compartilhadas com terceiros.
+        </label>
+        <button type="submit">Enviar</button>
+        <button id="cancelar" onclick="fecharPopup()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <img src="/media/gdg-logo.png" id="gdg-logo">
+        <div class="redes-sociais">
+          <p>Google Developer Group - Londrina</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="quem-somos">
+      <div class="container-quem-somos">
+        <h2>Quem Somos</h2>
+        <p>
+          Aqui você insere o texto sobre sua empresa, projeto ou comunidade.
+          Escreva de forma objetiva, com personalidade e conexão com o visitante.
+          Esse espaço é ideal para mostrar o propósito, missão ou visão.
+        </p>
+      </div>
+    </section>
+    
+    <section id="passados">
+      <h2>Eventos Passados</h2>
+      <div class="cards-container">
+        <a href="https://link-evento1.com" target="_blank" class="card">
+          <h3>Comming...</h3>
+          <p>Londrina - PR</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-devpr-na-estrada-marco2025/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup + DevPR na Estrada Março/2025</h3>
+          <p>13/03/2025</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-fevereiro2025/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Fevereiro/2025</h3>
+          <p>22/02/2025</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-no-fiil-2024/"
+          target="_blank" class="card" id="fill">
+          <img src="/media/gdg-fill.png" alt="GDG-Meetup">
+          <h3>GDG Londrina no FIIL 2024</h3>
+          <p>07/12/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-julho2024-networking-edition-1/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Novembro/2024 - Networking Edition</h3>
+          <p>21/11/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-outubro2024/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Outubro/2024</h3>
+          <p>26/10/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-setembro2024/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Setembro/2024</h3>
+          <p>26/09/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-ecoticnova-2024/" target="_blank"
+          class="card" id="eco">
+          <img src="/media/gdg-eco.png" alt="GDG-Meetup">
+          <h3>ECO.TIC'NOVA 2024</h3>
+          <p>27/08/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-julho2024-networking-edition/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Julho/2024 - Networking Edition</h3>
+          <p>25/07/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-junho2024/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Junho/2024</h3>
+          <p>29/06/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-maio2024/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Maio/2024</h3>
+          <p>23/05/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-abril2024/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Abril/2024</h3>
+          <p>25/04/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-fevereiro2024/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Fevereiro/2024</h3>
+          <p>01/02/2024</p>
+        </a>
+        <a href="https://gdg.community.dev/events/details/google-gdg-londrina-presents-gdg-londrina-meetup-setembro2023/"
+          target="_blank" class="card">
+          <img src="/media/gdg-meetup.png" alt="GDG-Meetup">
+          <h3>GDG Londrina Meetup Setembro/2023</h3>
+          <p>14/09/2023</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="organizadores">
+      <div class="container-organizadores">
+        <h2>Organizadores do Evento</h2>
+    
+        <div class="cards-organizadores">
+          <div class="card-org">
+            <div class="foto-organizador">
+              <img src="/media/hemerson-ravaneda.jpg" alt="Organizador 1">
+            </div>
+            <h3>Hemerson Ravaneda</h3>
+            <p>GDG - Organizador</p>
+            <p>Director of Science and Technology, codel.</p>
+          </div>
+    
+          <div class="card-org">
+            <div class="foto-organizador">
+              <img src="/media/flávio-granero" alt="Organizador 2">
+            </div>
+            <h3>Flávio Granero</h3>
+            <p>Organizador</p>
+            <p>VP of Engineering, Eventene.</p>
+          </div>
+    
+          <div class="card-org">
+            <div class="foto-organizador">
+              <img src="/media/marlon-pascoal.jpg" alt="Organizador 3">
+            </div>
+            <h3>Marlon Pascoal</h3>
+            <p>Organizador</p>
+            <p>Data Director, Superlógica.</p>
+          </div>
+    
+          <div class="card-org">
+            <div class="foto-organizador">
+              <img src="/media/vinicius-carvalho.jpg" alt="Organizador 4">
+            </div>
+            <h3>Vinicius Carvalho</h3>
+            <p>Project Manager, Jobsity</p>
+            <p>Função ou breve descrição.</p>
+          </div>
+    
+          <div class="card-org">
+            <div class="foto-organizador">
+              <img src="/media/gustavo-borges.jpg" alt="Organizador 5">
+            </div>
+            <h3>Gustavo Borges</h3>
+            <p>Organizador</p>
+            <p>CEO & CTO, nevoa.co</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Gabriel Gonzales & Rennan Rentz - Todos os direitos reservados.</p>
+
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
