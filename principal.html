@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/css/principal.css">
 </head>
 
 <body>
 
   <!-- Modal de entrada -->
-  <div id="popup" class="modal" style="display: flex;">
+  <div id="popup" class="modal">
     <div class="modal-content">
       <h2>Deseja garantir sua vaga?</h2>
       <button onclick="mostrarFormulario()">Garanta sua vaga</button>
@@ -23,7 +24,7 @@
       <form id="formulario" style="display: none;" onsubmit="enviarFormulario(event)">
         <input type="text" placeholder="Nome completo" required />
         <input type="email" placeholder="Email" required />
-        <input type="tel" placeholder="Número de contato" required />
+        <input type="tel" placeholder="Número de contato"required pattern="[0-9]{10,11}" inputmode="numeric"/>
         <input type="date" required />
         <label class="checkbox-lgpd">
           <input type="checkbox" required>
@@ -52,10 +53,53 @@
       <div class="container-quem-somos">
         <h2>Quem Somos</h2>
         <p>
-          Aqui você insere o texto sobre sua empresa, projeto ou comunidade.
-          Escreva de forma objetiva, com personalidade e conexão com o visitante.
-          Esse espaço é ideal para mostrar o propósito, missão ou visão.
+          O Google Developer Group (GDG) Londrina é uma comunidade local de desenvolvedores e entusiastas de tecnologia na região de Londrina, Paraná, que se reúne para aprender, compartilhar conhecimento e expandir sua rede de contatos. Como parte do programa global Google Developer Groups, o GDG Londrina organiza eventos, meetups e workshops focados em diversas tecnologias, com ênfase nas soluções e ferramentas do Google. Google Developer Groups
         </p>
+        <p>
+          O grupo promove encontros regulares que incluem palestras, sessões práticas e oportunidades de networking, proporcionando um ambiente colaborativo para profissionais e estudantes interessados em desenvolvimento de software e inovação tecnológica. Esses eventos são abertos a todos que desejam participar, independentemente do nível de experiência. 
+        </p>
+        <p>
+          Para se manter atualizado sobre as atividades e eventos futuros do GDG Londrina, você pode acompanhar as redes sociais do grupo, como o Instagram e o Facebook , ou visitar o site oficial . Essas plataformas fornecem informações sobre eventos passados e futuros, além de detalhes sobre como se envolver com a comunidade.
+        </p>
+      </div>
+    </section>
+
+    <section class="proximo-evento">
+      <div class="container-evento">
+    
+        <div class="info-evento">
+          <h2>Próximo Evento</h2>
+    
+          <div class="card-info">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h3>Localização</h3>
+              <p>Wait... Comming.</p>
+            </div>
+          </div>
+    
+          <div class="card-info">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h3>Horário</h3>
+              <p>Wait... Comming.</p>
+            </div>
+          </div>
+    
+          <div class="card-info">
+            <i class="fa-solid fa-lightbulb"></i>
+            <div>
+              <h3>Tema</h3>
+              <p>Wait... Comming.</p>
+            </div>
+          </div>
+    
+        </div>
+    
+        <div class="imagem-evento">
+          <img src="media/proxim-evento.jpg" alt="Imagem do Evento">
+        </div>
+    
       </div>
     </section>
     
@@ -147,6 +191,39 @@
       </div>
     </section>
 
+    <section class="galeria">
+      <h2>Galeria de Fotos</h2>
+      <div class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-track">
+          <img src="/media/galeria-1.jpeg" alt="Evento 1">
+          <img src="/media/galeria-2.jpeg" alt="Evento 1">
+          <img src="/media/galeria-3.jpeg" alt="Evento 1">
+          <img src="/media/galeria-4.jpeg" alt="Evento 1">
+          <img src="/media/galeria-5.jpeg" alt="Evento 1">
+          <img src="/media/galeria-6.jpeg" alt="Evento 1">
+          <img src="/media/galeria-7.jpeg" alt="Evento 1">
+          <img src="/media/galeria-8.jpeg" alt="Evento 1">
+          <img src="/media/galeria-9.jpeg" alt="Evento 1">
+          <img src="/media/galeria-10.jpeg" alt="Evento 1">
+          <img src="/media/galeria-11.jpeg" alt="Evento 1">
+          <img src="/media/galeria-12.jpeg" alt="Evento 1">
+          <img src="/media/galeria-13.jpeg" alt="Evento 1">
+          <img src="/media/galeria-14.jpeg" alt="Evento 1">
+          <img src="/media/galeria-15.jpeg" alt="Evento 1">
+          <img src="/media/galeria-16.jpeg" alt="Evento 1">
+          <img src="/media/galeria-17.jpeg" alt="Evento 1">
+          <img src="/media/galeria-18.jpeg" alt="Evento 1">
+          <img src="/media/galeria-19.jpeg" alt="Evento 1">
+          <img src="/media/galeria-20.jpeg" alt="Evento 1">
+
+
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+    
+    
     <section class="organizadores">
       <div class="container-organizadores">
         <h2>Organizadores do Evento</h2>
@@ -159,6 +236,14 @@
             <h3>Hemerson Ravaneda</h3>
             <p>GDG - Organizador</p>
             <p>Director of Science and Technology, codel.</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/hemerson.ravaneda/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/hravaneda/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
     
           <div class="card-org">
@@ -168,6 +253,14 @@
             <h3>Flávio Granero</h3>
             <p>Organizador</p>
             <p>VP of Engineering, Eventene.</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/flaviogranero/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/flaviogranero/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
     
           <div class="card-org">
@@ -177,6 +270,14 @@
             <h3>Marlon Pascoal</h3>
             <p>Organizador</p>
             <p>Data Director, Superlógica.</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/marloncpascoal/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/marlonpascoal/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
     
           <div class="card-org">
@@ -186,6 +287,14 @@
             <h3>Vinicius Carvalho</h3>
             <p>Project Manager, Jobsity</p>
             <p>Função ou breve descrição.</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/viniciuscarvalho.me/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/viniciuscarvalho-me/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
     
           <div class="card-org">
@@ -195,6 +304,14 @@
             <h3>Gustavo Borges</h3>
             <p>Organizador</p>
             <p>CEO & CTO, nevoa.co</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/guhs.borges/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/gustavo-cavalcante-borges/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -203,6 +320,10 @@
 
   </main>
 
+
+  <div id="icone-flutuante" onclick="abrirPopupNovamente()">
+    💬
+  </div>  
   <footer>
     <p>&copy; 2025 - Gabriel Gonzales & Rennan Rentz - Todos os direitos reservados.</p>
 
