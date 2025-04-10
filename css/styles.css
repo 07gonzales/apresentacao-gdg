@@ -71,7 +71,7 @@ button {
     max-width: 800px; 
     z-index: 1;
     position: absolute;
-    top: 15%; 
+    top: 25%; 
     left: 25%;
     transform: translateX(-50%);
     animation: float 4s ease-in-out infinite;
