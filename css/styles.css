@@ -160,10 +160,15 @@ button {
     .shape {
         width: 50px;
         height: 12px;
+        flex-direction: row;
     }
 
     .gdg-container {
-        top: 10%;
+        margin-top: 10%;
+        top: 15%;
+        flex-direction: row;
+        margin-top: auto;
+
 
     }
 
@@ -185,6 +190,8 @@ button {
         align-items: center;
         align-content: center;
         text-align: center;
+        flex-direction: row;
+        margin-top: auto;
     }
 
     .gdg-text {
@@ -194,6 +201,7 @@ button {
     .shape {
         width: 40px;
         height: 10px;
+        flex-direction: row;
     }
 
     .opcoes {
@@ -221,6 +229,8 @@ button {
 
     .gdg-container {
         top: 7%;
+        flex-direction: row;
+        margin-top: auto;
     }
 
     button {
