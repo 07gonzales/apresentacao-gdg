@@ -261,6 +261,8 @@ body, html {
   .imagem-evento {
     flex: 1;
     min-width: 300px;
+    align-items: center;
+    height: 350px;    
   }
   
   .imagem-evento img {
