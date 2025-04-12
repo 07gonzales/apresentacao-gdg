@@ -21,15 +21,16 @@
       <button onclick="mostrarFormulario()">Garanta sua vaga</button>
       <button onclick="fecharPopup()">Não, obrigado</button>
 
-      <form id="formulario" style="display: none;" onsubmit="enviarFormulario(event)">
-        <input type="text" placeholder="Nome completo" required />
-        <input type="email" placeholder="Email" required />
-        <input type="tel" placeholder="Número de contato"required pattern="[0-9]{10,11}" inputmode="numeric"/>
-        <input type="date" required />
+      <form id="formulario" style="display: none;" method="POST" action="http://localhost:5000/enviar">
+        <input type="text" name="nome" placeholder="Nome completo" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="telefone" placeholder="Número de contato" required pattern="[0-9]{10,11}" inputmode="numeric"/>
+        
         <label class="checkbox-lgpd">
-          <input type="checkbox" required>
-        Ao enviar este formulário, você declara estar ciente e de acordo que os dados pessoais informados serão utilizados exclusivamente para fins de contato e para o envio de informações e divulgações sobre eventos relacionados. Todas as informações fornecidas estão protegidas de acordo com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), sendo armazenadas com segurança e jamais compartilhadas com terceiros.
+          <input type="checkbox" name="lgpd" required>
+          Ao enviar este formulário, você declara estar ciente e de acordo que os dados pessoais informados serão utilizados exclusivamente para fins de contato e para o envio de informações e divulgações sobre eventos relacionados...
         </label>
+        
         <button type="submit">Enviar</button>
         <button id="cancelar" onclick="fecharPopup()">Cancelar</button>
       </form>
