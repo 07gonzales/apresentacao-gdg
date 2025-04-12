@@ -105,4 +105,41 @@ window.onload = () => {
   // Inicialização
   track.style.transition = 'transform 0.5s ease';
   updateCarousel();
+
+
+  document.getElementById("formulario").addEventListener("submit", async function(event) {
+    event.preventDefault();
+  
+    const form = event.target;
+    const formData = new FormData(form);
+  
+    const dados = {
+      nome: formData.get("nome"),
+      email: formData.get("email"),
+      telefone: formData.get("telefone"),
+      lgpd: formData.get("lgpd") === "on"
+    };
+  
+    try {
+      const response = await fetch("http://localhost:5000/enviar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+      });
+  
+      const resultado = await response.json();
+  
+      if (response.ok) {
+        alert("Inscrição confirmada! Um e-mail de confirmação foi enviado, verifique sua caixa de entrar/spam.");
+        form.reset(); // limpa o formulário
+      } else {
+        alert("Erro ao enviar: " + resultado.message);
+      }
+    } catch (error) {
+      alert("Erro na conexão com o servidor.");
+      console.error(error);
+    }
+  });
   
