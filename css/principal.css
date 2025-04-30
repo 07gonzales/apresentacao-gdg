@@ -59,18 +59,6 @@ body, html {
     margin-top: 20px;
   }
   
-  .modal-content input {
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    background-color: #393a3b;
-    color: #f3f4f6;
-  }
-  
-  .modal-content input::placeholder {
-    color: #9ca3af;
-  }
   
   .modal-content button {
     background-color: #000000;
@@ -88,35 +76,6 @@ body, html {
     background-color: #161618;
   }
 
-  
-  .modal-content button[type="submit"] {
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  .modal-content button[type="submit"]:hover {
-    background-color: #161618;
-  }
-
-  .checkbox-lgpd {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
-  .checkbox-lgpd input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #430000; 
-    cursor: pointer;
-    margin-top: 4px;
-  }
   
   /* Cabeçalho */
   header {
@@ -201,77 +160,171 @@ body, html {
   }
 
   .proximo-evento {
-    background-color: #dbdada;
-    padding: 100px 20px;
+    width: 100%;
+    padding: 60px 20px;
+    /* background-color: #f9f9f9; */
+    box-sizing: border-box;
   }
   
   .container-evento {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
-    flex-wrap: wrap;
   }
   
-  .info-evento {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .info-evento h2 {
+  #proximo-evento {
+    font-family: Orbitron;
     font-size: 40px;
     font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 40px;
-  }
-  
-  .card-info {
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .card-info:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card-info i {
-    font-size: 30px;
-    color: #0066ff;
-  }
-  
-  .card-info h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .card-info p {
-    font-size: 16px;
-    color: #555;
+    color: #000000; 
+    letter-spacing: 0.5px;
+    justify-content: center;
+    display: flex;
   }
   
   .imagem-evento {
-    flex: 1;
-    min-width: 300px;
+    display: flex;
     align-items: center;
-    height: 350px;    
+    justify-content: center;
+    padding: 20px 0;
   }
   
   .imagem-evento img {
     width: 100%;
+    max-width: 1100px; /* <- Isso remove o limite de 1100px */
+    max-height: 550px;
+    object-fit: cover; /* ou "contain", dependendo do efeito desejado */
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+    object-fit: fill;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
+  /* Cards de informação */
+  .cards-container-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+    margin-top: 2px;
+  }
   
+  .card-info {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 300px;
+    flex: 1 1 250px;
+    margin-top: 1px;
+  }
+  
+  .card-info i {
+    font-size: 1.5rem;
+    color: #444;
+    margin-top: 4px;
+  }
+  
+  .card-info h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #222;
+  }
+  
+  .card-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 4px 0 0 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .cards-container-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card-info {
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .info-evento h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+
+ /* Seção de palestrantes */
+.palestrantes {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.palestrantes h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-family: Orbitron, sans-serif;
+  letter-spacing: 1px;
+}
+
+.palestrantes-imagens {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.palestrante {
+  flex: 1 1 45%;
+  max-width: 500px;
+}
+
+.palestrante img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.palestrante p {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  font-family: sans-serif;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .palestrantes h3 {
+    font-size: 1.8rem;
+  }
+
+  .palestrantes-imagens {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .palestrante {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+
+
   
   .cards-container {
     display: grid;
