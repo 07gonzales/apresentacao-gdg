@@ -159,91 +159,144 @@ body, html {
     color: #444444; /* Cinza escuro */
   }
 
-  .proximo-evento {
-    width: 100%;
-    padding: 60px 20px;
-    /* background-color: #f9f9f9; */
-    box-sizing: border-box;
-  }
-  
-  .container-evento {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  #proximo-evento {
-    font-family: Orbitron;
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #000000; 
-    letter-spacing: 0.5px;
-    justify-content: center;
-    display: flex;
-  }
-  
-  .imagem-evento {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-  }
-  
-  .imagem-evento img {
-    width: 100%;
-    max-width: 1100px; /* <- Isso remove o limite de 1100px */
-    max-height: 550px;
-    object-fit: cover; /* ou "contain", dependendo do efeito desejado */
-    border-radius: 12px;
-    display: block;
-    object-fit: fill;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Cards de informação */
-  .cards-container-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 20px;
-    margin-top: 2px;
-  }
-  
-  .card-info {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    max-width: 300px;
-    flex: 1 1 250px;
-    margin-top: 1px;
-  }
-  
-  .card-info i {
-    font-size: 1.5rem;
-    color: #444;
-    margin-top: 4px;
-  }
-  
-  .card-info h3 {
-    font-size: 1.1rem;
-    margin: 0;
-    color: #222;
-  }
-  
-  .card-info p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 4px 0 0 0;
-    font-size: 0.95rem;
-    color: #666;
-  }
+/* Layout centralizado com proporções equilibradas */
+.info-evento-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Cards com largura ideal e responsividade */
+.cards-container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 1 420px;
+  max-width: 440px;
+}
+
+/* Card com presença visual e efeito profissional */
+.card-info {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 22px 28px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-info::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.12), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-info:hover::before {
+  opacity: 1;
+}
+
+.card-info:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+#proximo-evento {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px; /* Aumenta o tamanho da fonte */
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+#palestras {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px; /* Aumenta o tamanho da fonte */
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+
+/* Ícones visualmente destacados */
+.card-info i {
+  font-size: 1.6rem;
+  color: #0077cc;
+  margin-top: 6px;
+}
+
+/* Títulos moderados */
+.card-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Textos com leitura suave */
+.card-info p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  margin-top: 6px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Imagem lateral com destaque */
+.imagem-evento {
+  flex: 1 1 460px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Imagem estilizada */
+.imagem-evento img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-evento img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
+
   
   /* Responsivo */
   @media (max-width: 768px) {
@@ -296,7 +349,14 @@ body, html {
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.palestrante img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
 
 .palestrante p {
   margin-top: 12px;
@@ -322,9 +382,6 @@ body, html {
     max-width: 90%;
   }
 }
-
-
-
   
   .cards-container {
     display: grid;
@@ -456,6 +513,64 @@ body, html {
   
   .next {
     right: 10px;
+  }
+  
+  @media (max-width: 1024px) {
+    .carousel {
+      padding: 15px 100px; /* Reduz padding lateral em tablets */
+    }
+  
+    .carousel-track img {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .prev,
+    .next {
+      font-size: 1.8rem;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+      padding: 15px 40px; /* Reduz padding lateral em celulares */
+    }
+  
+    .carousel-track img {
+      width: 250px;
+      height: 250px;
+      border-radius: 30px;
+    }
+  
+    .prev,
+    .next {
+      font-size: 1.5rem;
+      padding: 6px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel {
+      padding: 10px 20px; /* Mais compacto em celulares pequenos */
+    }
+  
+    .carousel-track {
+      gap: 10px;
+    }
+  
+    .carousel-track img {
+      width: 200px;
+      height: 200px;
+      border-radius: 25px;
+    }
+  
+    .prev,
+    .next {
+      font-size: 1.2rem;
+      padding: 5px 8px;
+      top: 45%;
+    }
   }
   
   
@@ -617,5 +732,9 @@ body, html {
     padding: 5px;
     width: 100%;
     bottom: 0;
+  }
+
+  #dev {
+    font-size: small;
   }
   

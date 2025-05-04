@@ -46,7 +46,7 @@ button {
     border-radius: 20px;
     cursor: pointer;
     transition: background 0.3s ease;
-    opacity: 10%;
+    opacity: 100%;
 }
 
 
@@ -136,7 +136,7 @@ button {
     background: #ffc926;   
 }
 
-.button-1:hover {
+/* .button-1:hover {
    
     opacity: 100%;
 }
@@ -149,7 +149,7 @@ button {
 .button-3:hover{
     
     opacity: 100%;  
-}
+} */
 
 
 /* RESPONSIVIDADE GERAL */
