@@ -50,7 +50,6 @@ button {
 }
 
 
-/* Canvas de partículas */
 #particles {
     position: absolute;
     top: 0;
@@ -60,7 +59,6 @@ button {
     z-index: -1;
 }
 
-/* Logo GDG animado */
 .gdg-container {
     display: flex;
     align-items: center;
@@ -77,14 +75,12 @@ button {
     animation: float 4s ease-in-out infinite;
 }
 
-/* Efeito de flutuação */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
-/* Estilização das Formas */
 .shape {
     width: 60px;
     height: 15px;
@@ -135,26 +131,6 @@ button {
 .button-3 {
     background: #ffc926;   
 }
-
-/* .button-1:hover {
-   
-    opacity: 100%;
-}
-
-.button-2:hover{
-    
-    opacity: 100%;
-}
-
-.button-3:hover{
-    
-    opacity: 100%;  
-} */
-
-
-/* RESPONSIVIDADE GERAL */
-
-/* Telas menores que 1200px (Tablets, Notebooks menores) */
 @media (max-width: 1200px) {
 
     .gdg-text {
@@ -182,7 +158,6 @@ button {
     }
 }
 
-/* Telas menores que 768px (Tablets e Celulares em pé) */
 @media (max-width: 768px) {
 
     .gdg-container {
@@ -218,7 +193,6 @@ button {
     }
 }
 
-/* Telas menores que 480px (Celulares pequenos) */
 @media (max-width: 480px) {
 
     .gdg-text {

@@ -1,5 +1,5 @@
 main {
-  padding: 30px;
+  padding: 20px;
 }
 
 body, html {
@@ -92,8 +92,6 @@ body, html {
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
   }
 
-  
-  /* Cabeçalho */
   header {
     background-color: #000000;
     color: #fff;
@@ -136,15 +134,15 @@ body, html {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 20px;
-    color: #1a1a1a; /* Preto leve */
+    color: #1a1a1a; 
     letter-spacing: 0.5px;
     text-align: center;
   }
 
   .quem-somos {
-    background-color: #dbdada; /* Cinza bem claro, neutro e elegante */
+    background-color: #dbdada; 
     font-family: Arial, Helvetica, sans-serif;
-    color: #000000; /* Preto suave */
+    color: #000000; 
     padding: 0 20px;
     display: flex;
     justify-content: center;
@@ -165,17 +163,16 @@ body, html {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1a1a1a; /* Preto leve */
+    color: #1a1a1a; 
     letter-spacing: 0.5px;
   }
   
   .quem-somos p {
     font-size: 18px;
     line-height: 1.8;
-    color: #444444; /* Cinza escuro */
+    color: #444444; 
   }
 
-/* Layout centralizado com proporções equilibradas */
 .info-evento-layout {
   display: flex;
   justify-content: center;
@@ -187,7 +184,6 @@ body, html {
   padding: 50px 20px;
 }
 
-/* Cards com largura ideal e responsividade */
 .cards-container-info {
   display: flex;
   flex-direction: column;
@@ -197,7 +193,6 @@ body, html {
   object-fit: fill;
 }
 
-/* Card com presença visual e efeito profissional */
 .card-info {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -237,7 +232,7 @@ body, html {
 
 #proximo-evento {
   font-family: 'Orbitron', sans-serif;
-  font-size: 40px; /* Aumenta o tamanho da fonte */
+  font-size: 40px; 
   font-weight: 700;
   color: #000000;
   letter-spacing: 1px;
@@ -252,7 +247,7 @@ body, html {
 
 #palestras {
   font-family: 'Orbitron', sans-serif;
-  font-size: 50px; /* Aumenta o tamanho da fonte */
+  font-size: 50px; 
   font-weight: 700;
   color: #000000;
   letter-spacing: 1px;
@@ -266,14 +261,12 @@ body, html {
 }
 
 
-/* Ícones visualmente destacados */
 .card-info i {
   font-size: 1.6rem;
   color: #0077cc;
   margin-top: 6px;
 }
 
-/* Títulos moderados */
 .card-info h3 {
   font-size: 1.1rem;
   margin: 0;
@@ -281,7 +274,6 @@ body, html {
   color: #222;
 }
 
-/* Textos com leitura suave */
 .card-info p {
   font-size: 0.95rem;
   color: #444;
@@ -290,7 +282,6 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Imagem lateral com destaque */
 .imagem-evento {
   flex: 1 1 460px;
   max-width: 500px;
@@ -300,7 +291,6 @@ body, html {
   padding: 0;
 }
 
-/* Imagem estilizada */
 .imagem-evento img {
   width: 100%;
   max-width: 100%;
@@ -315,8 +305,6 @@ body, html {
 }
 
 
-  
-  /* Responsivo */
   @media (max-width: 768px) {
     .cards-container-info {
       flex-direction: column;
@@ -334,7 +322,6 @@ body, html {
   }
 
 
- /* Seção de palestrantes */
 .palestrantes {
   margin-top: 40px;
   text-align: center;
@@ -384,7 +371,6 @@ body, html {
   font-family: sans-serif;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .palestrantes h3 {
     font-size: 1.8rem;
@@ -409,7 +395,7 @@ body, html {
   }
   
   .card {
-    background: #f5f5f5(14, 94, 214, 0.8); /* Fundo escuro com transparência */
+    background: #f5f5f5(14, 94, 214, 0.8); 
     border-radius: 15px;
     padding: 20px;
     color: #000000;
@@ -468,7 +454,7 @@ body, html {
     border-radius: 50px;
     position: relative;
     overflow: hidden;
-    padding: 15px 400px; /* Espaçamento lateral */
+    padding: 15px 400px;
     max-width: 100%;
     box-sizing: border-box;
   }
@@ -494,7 +480,6 @@ body, html {
   
   .carousel-track img.active {
     filter: blur(0);
-    /* transform: scale(1.); */
     opacity: 1;
     z-index: 1;
     pointer-events: auto;
@@ -535,7 +520,7 @@ body, html {
   
   @media (max-width: 1024px) {
     .carousel {
-      padding: 15px 100px; /* Reduz padding lateral em tablets */
+      padding: 15px 100px; 
     }
   
     .carousel-track img {
@@ -552,7 +537,7 @@ body, html {
   
   @media (max-width: 768px) {
     .carousel {
-      padding: 15px 40px; /* Reduz padding lateral em celulares */
+      padding: 15px 40px; 
     }
   
     .carousel-track img {
@@ -570,7 +555,7 @@ body, html {
   
   @media (max-width: 480px) {
     .carousel {
-      padding: 10px 20px; /* Mais compacto em celulares pequenos */
+      padding: 10px 20px; 
     }
   
     .carousel-track {
@@ -593,7 +578,7 @@ body, html {
   
   
   .organizadores {
-    background-color: #dbdada;/* Branco clean */
+    background-color: #dbdada;
     color: #1a1a1a;
     padding: 100px 20px;
     text-align: center;
@@ -622,7 +607,7 @@ body, html {
     padding: 30px 20px;
     border-radius: 12px;
     transition: transform 1s ease;
-    position: relative;  /* ESSA LINHA RESOLVE */
+    position: relative;  
     height: 100%;
   }
   
@@ -716,7 +701,7 @@ body, html {
     position: fixed;
   }
   
-  /* Flecha estilo balão no canto inferior direito */
+
   #icone-flutuante::after {
     content: "";
     position: absolute;
@@ -729,23 +714,11 @@ body, html {
     border-color: #1c1c1c transparent transparent transparent;
   }
   
-  
-  /* #icone-flutuante:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
-  }
-  
-#icone-flutuante:hover {
-  background-color: #333;
-  transform: scale(1.1);
-} */
-
-  /* Ícone Flutuante */
   #iconeFlutuante {
     position: fixed;
     bottom: 30px;
     left: 30px;
-    background-color: #000000;  /* Vermelho vibrante estilo YouTube */
+    background-color: #000000;  
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -766,8 +739,6 @@ body, html {
     transform: scale(1.05);
   }
   
-  
-  /* Rodapé */
   footer {
     background-color: #000000;
     color: #fff;

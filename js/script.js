@@ -35,7 +35,6 @@ window.onload = () => {
     popup.style.display = 'flex';
     formulario.style.display = 'none';
   
-    // Mostra novamente os botões iniciais
     botoesIniciais.forEach(botao => {
       botao.style.display = "inline-block";
     });
@@ -49,7 +48,7 @@ window.onload = () => {
   let index = 0;
   let imageWidth = images[0].getBoundingClientRect().width + 20; 
   
-  // DUPLICA AS IMAGENS PRA DAR EFEITO INFINITO
+  
   images.forEach(img => {
     const clone = img.cloneNode(true);
     track.appendChild(clone);
@@ -61,11 +60,11 @@ window.onload = () => {
     track.style.transform = `translateX(${translateX}px)`;
   }
   
-  // Próxima imagem
+  
   function nextImage() {
     index++;
     
-    // Quando passar da metade (fim das imagens originais), volta o index suavemente
+    
     if (index >= images.length) {
       index = 0;
       track.style.transition = 'none';
@@ -80,7 +79,7 @@ window.onload = () => {
     }
   }
   
-  // Imagem anterior
+
   function prevImage() {
     if (index <= 0) {
       index = images.length;
@@ -97,12 +96,12 @@ window.onload = () => {
     }
   }
   
-  // Eventos
+
   nextButton.addEventListener('click', nextImage);
   prevButton.addEventListener('click', prevImage);
   window.addEventListener('resize', updateCarousel);
   
-  // Inicialização
+
   track.style.transition = 'transform 0.5s ease';
   updateCarousel();
 
@@ -114,7 +113,7 @@ window.onload = () => {
       .then(function(response) {
         alert("E-mail enviado com sucesso!");
         document.getElementById("formulario").reset();
-        fecharPopup(); // se quiser esconder o formulário depois do envio
+        fecharPopup(); 
       }, function(error) {
         alert("Erro ao enviar o e-mail. Tente novamente.");
         console.error("Erro:", error);
