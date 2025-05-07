@@ -51,7 +51,14 @@ A aplicação foi testada e adaptada para diversos tamanhos de tela (desktop, ta
 
 ## 🧑‍💻 Desenvolvedores
 
-[<img src="dev-gabriel.jpeg" height=100 width=100><br><sub>Gabriel Pinto Gonzales</sub>](https://www.linkedin.com/in/gabrielpgonzales/)   [<img src="dev-rennan.jpeg" width=100><br><sub>Rennan Rentz</sub>](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
+[<img src="dev-gabriel.jpeg" height= 97px width=100px>](https://www.linkedin.com/in/gabrielpgonzales/)
+[<img src="dev-rennan.jpeg" height= 97px width=100px>](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
+
+[Gabriel Gonzales](https://www.linkedin.com/in/gabrielpgonzales/)  &    [Rennan Rentz](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
+
+
+## Google Developer Group - Londrina  
+Conectando pessoas, compartilhando conhecimento, construindo o futuro da tecnologia. 🚀
 
 
 
