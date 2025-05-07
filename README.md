@@ -27,6 +27,7 @@ Segue abaixo o mapa mental elaborado por nós, contendo todas as ideias necessá
 - HTML5
 - CSS3 (com animações, media queries e efeito Glassmorphism)
 - JavaScript (DOM, canvas e carrossel de imagens)
+- EmailJS (para envio de e-mails via formulário)
 - Font Awesome (ícones)
 - Google Fonts: Orbitron
 - Responsividade via Media Queries
@@ -52,7 +53,7 @@ A aplicação foi testada e adaptada para diversos tamanhos de tela (desktop, ta
 
 <img src='dev-gabriel.jpeg' height= 97px width=100px><img src='dev-rennan.jpeg' height= 97px width=100px>
 
-[Gabriel Gonzales](https://www.linkedin.com/in/gabrielpgonzales/)  &   [Rennan Rentz](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
+[Gabriel Gonzales](https://www.linkedin.com/in/gabrielpgonzales/)  &    [Rennan Rentz](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
 
 
 ## Google Developer Group - Londrina  
