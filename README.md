@@ -41,7 +41,7 @@ Segue abaixo o mapa mental elaborado por nós, contendo todas as ideias necessá
 │ ├── styles.css - Estilos da tela inicial  
 │ └── principal.css - Estilos da tela principal do evento  
 ├── js/  
-│ ├── script.js # Carrossel, modal e manipulação de DOM  
+│ ├── script.js - Carrossel, modal e manipulação de DOM  
 │ └── particles-canvas.js - Animação de partículas no background  
 ├── media/  
 │ └── [imagens do evento, palestrantes e logos]  
@@ -51,7 +51,7 @@ A aplicação foi testada e adaptada para diversos tamanhos de tela (desktop, ta
 
 ## 🧑‍💻 Desenvolvedores
 
-[<img src="media/dev-gabriel.jpeg" width=120><br><sub>Gabriel Pinto Gonzales</sub>](https://www.linkedin.com/in/gabrielpgonzales/)   [<img src="media/dev-rennan.jpeg" width=120><br><sub>Rennan Rentz</sub>](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
+[<img src="dev-gabriel.jpeg" height=100 width=100><br><sub>Gabriel Pinto Gonzales</sub>](https://www.linkedin.com/in/gabrielpgonzales/)   [<img src="dev-rennan.jpeg" width=100><br><sub>Rennan Rentz</sub>](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
 
 
 
