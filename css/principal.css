@@ -230,6 +230,33 @@ body, html {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
 }
 
+@media (max-width: 768px) {
+  .card.escondido {
+    display: none;
+  }
+}
+
+.ver-mais-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#btnVerMais {
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+  font-family: Orbitron, sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#btnVerMais:hover {
+  background-color: #222;
+}
+
 #proximo-evento {
   font-family: 'Orbitron', sans-serif;
   font-size: 40px; 

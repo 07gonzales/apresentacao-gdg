@@ -106,17 +106,15 @@ window.onload = () => {
   updateCarousel();
 
 
-  document.getElementById("formulario").addEventListener("submit", function(e) {
-    e.preventDefault();
+  document.addEventListener("DOMContentLoaded", function () {
+    const btnVerMais = document.getElementById("btnVerMais");
+    const cardsEscondidos = document.querySelectorAll(".card.escondido");
 
-    emailjs.sendForm('service_68w69ey', 'template_e8t6vqt', this)
-      .then(function(response) {
-        alert("E-mail enviado com sucesso!");
-        document.getElementById("formulario").reset();
-        fecharPopup(); 
-      }, function(error) {
-        alert("Erro ao enviar o e-mail. Tente novamente.");
-        console.error("Erro:", error);
+    btnVerMais.addEventListener("click", () => {
+      cardsEscondidos.forEach(card => {
+        card.style.display = "flex";
       });
+      btnVerMais.style.display = "none";
+    });
   });
   
