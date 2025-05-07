@@ -1,4 +1,6 @@
-# Página de evento - GDG Londrina 
+# 🌐 GDG Londrina - Página de Apresentação de Evento
+
+Este repositório contém o código-fonte do site oficial do **GDG Londrina Meetup Maio 2025**, desenvolvido com foco em acessibilidade, performance visual e uma apresentação dinâmica de informações sobre o evento. A página é responsiva e oferece seções detalhadas sobre a programação, palestrantes, galeria de fotos, eventos passados e equipe organizadora.
 
 ## Descrição do projeto
 
@@ -10,18 +12,46 @@ Segue abaixo o mapa mental elaborado por nós, contendo todas as ideias necessá
 
 ![](media/mapa-mental.jpg)
 
-## Protótipos de baixa fidelidade
+## 🎯 Funcionalidades
 
-Segue abaixo o protótipo de duas telas do nosso projeto, a primeira, sendo nossa tela inicial, contendo o nome do evento juntamente das opções para seguirem para o instagram, página oficial e nossa página de apresentação, o segundo protótipo é da nossa tela de apresentação do evento, contendo cabeçalho, a data de cada evento, as descrições, regras e especificações de cada evento.
+- Página inicial com partículas animadas e botões de acesso rápido.
+- Modal de inscrição com QR Code e link externo.
+- Galeria de fotos com carrossel animado.
+- Cards interativos para eventos passados com links externos.
+- Lista de palestras e localização detalhada do evento.
+- Apresentação dos organizadores com links para redes sociais.
+- Ícones flutuantes para retorno ao formulário e ajuda.
 
-![Protótipo 1](media/prototipo1.jpeg)
-![Protótipo 2](media/prototipo2.jpeg)
+## 🧰 Tecnologias Utilizadas
+
+- HTML5
+- CSS3 (com animações, media queries e efeito Glassmorphism)
+- JavaScript (DOM, canvas e carrossel de imagens)
+- EmailJS (para envio de e-mails via formulário)
+- Font Awesome (ícones)
+- Google Fonts: Orbitron
+- Responsividade via Media Queries
+
+## 📁 Estrutura de Diretórios
 
 
-## Tecnologias a serem utilizadas.
+├── index.html - Página inicial com animação de partículas  
+├── principal.html - Página de apresentação do evento  
+├── css/  
+│ ├── styles.css - Estilos da tela inicial  
+│ └── principal.css - Estilos da tela principal do evento  
+├── js/  
+│ ├── script.js # Carrossel, modal e manipulação de DOM  
+│ └── particles-canvas.js - Animação de partículas no background  
+├── media/  
+│ └── [imagens do evento, palestrantes e logos]  
 
-HTML (HyperText Markup Language): É a linguagem de marcação usada para estruturar conteúdo na web. O HTML define a estrutura básica das páginas, como títulos, parágrafos, links, imagens e outros elementos. Ele fornece a espinha dorsal de uma página da web.
+📱 Responsividade
+A aplicação foi testada e adaptada para diversos tamanhos de tela (desktop, tablet e dispositivos móveis) com media queries, mantendo a identidade visual e a usabilidade.
 
-CSS (Cascading Style Sheets): É a linguagem responsável pela estilização das páginas da web. O CSS define como o conteúdo HTML será exibido, como cores, fontes, tamanhos, espaçamentos e layout. Ele permite que você crie designs atraentes e responsivos.
+## 🧑‍💻 Desenvolvedores
 
-JavaScript (JS): É uma linguagem de programação que adiciona interatividade e dinamismo às páginas da web. Com JavaScript, você pode manipular elementos HTML e CSS em tempo real, criar animações, validar formulários, interagir com servidores e muito mais.
+[<img src="media/dev-gabriel.jpeg" width=120><br><sub>Gabriel Pinto Gonzales</sub>](https://www.linkedin.com/in/gabrielpgonzales/)   [<img src="media/dev-rennan.jpeg" width=120><br><sub>Rennan Rentz</sub>](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
+
+
+
