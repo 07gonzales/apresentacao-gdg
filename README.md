@@ -51,8 +51,7 @@ A aplicação foi testada e adaptada para diversos tamanhos de tela (desktop, ta
 
 ## 🧑‍💻 Desenvolvedores
 
-<img src='dev-gabriel.jpeg' height= 97px width=100px>
-<img src='dev-rennan.jpeg' height= 97px width=100px>
+<img src='dev-gabriel.jpeg' height= 97px width=100px><img src='dev-rennan.jpeg' height= 97px width=100px>
 
 [Gabriel Gonzales](https://www.linkedin.com/in/gabrielpgonzales/)  &    [Rennan Rentz](https://www.linkedin.com/in/rennan-rentz-lopes-da-silva-954353319/)
 
