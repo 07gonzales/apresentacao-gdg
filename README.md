@@ -27,7 +27,6 @@ Segue abaixo o mapa mental elaborado por nós, contendo todas as ideias necessá
 - HTML5
 - CSS3 (com animações, media queries e efeito Glassmorphism)
 - JavaScript (DOM, canvas e carrossel de imagens)
-- EmailJS (para envio de e-mails via formulário)
 - Font Awesome (ícones)
 - Google Fonts: Orbitron
 - Responsividade via Media Queries
